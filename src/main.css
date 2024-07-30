@@ -20,19 +20,3 @@ body {
     font-size: 35px;
     font-family: "Consolas", "Menlo", "Monaco", "Courier New", monospace;
 }
-
-.dbd {
-    font-size: 15px;
-    color: #636363;
-    /* padding-top: 100px; */
-    margin-top: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: "Consolas", "Menlo", "Monaco", "Courier New", monospace;
-}
-
-a {
-    text-decoration: none;
-    color: #737373;
-}

@@ -7,16 +7,6 @@ export const App = () => {
             <div className="clock-container">
                 <Clock />
             </div>
-            <span className="dbd">
-                developed by&nbsp;
-                <a
-                    href="https://djavelin.vercel.app/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    djavelin_
-                </a>
-            </span>
         </>
     );
 };
