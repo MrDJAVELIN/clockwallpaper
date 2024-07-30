@@ -1,0 +1,37 @@
+body {
+    background-color: #23241f;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.clock-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.clock {
+    font-size: 35px;
+    font-family: "Consolas", "Menlo", "Monaco", "Courier New", monospace;
+}
+
+.dbd {
+    font-size: 15px;
+    color: #636363;
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Consolas", "Menlo", "Monaco", "Courier New", monospace;
+}
+
+a {
+    text-decoration: none;
+    color: #737373;
+}
