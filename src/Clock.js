@@ -14,14 +14,14 @@ export const Clock = () => {
     }, []);
 
     const codeTime = `
-    let time = {
-        "hour": ${time.getHours()},
-        "minute": ${time.getMinutes()},
-        "second": ${time.getSeconds()},
-        "day": ${time.getDate()},
-        "month": ${time.getMonth() + 1},
-        "year": ${time.getFullYear()}
-    }`;
+let time = {
+    "hour": ${time.getHours()},
+    "minute": ${time.getMinutes()},
+    "second": ${time.getSeconds()},
+    "day": ${time.getDate()},
+    "month": ${time.getMonth() + 1},
+    "year": ${time.getFullYear()}
+}`;
 
     return (
         <div className="clock">

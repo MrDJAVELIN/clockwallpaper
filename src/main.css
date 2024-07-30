@@ -21,3 +21,11 @@ body {
     font-size: 35px;
     font-family: "Consolas", "Menlo", "Monaco", "Courier New", monospace;
 }
+
+.dbd {
+    font-size: 15px;
+    font-family: "Consolas", "Menlo", "Monaco", "Courier New", monospace;
+    color: #404040;
+    display: flex;
+    justify-content: center;
+}

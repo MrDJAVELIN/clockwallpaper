@@ -8,6 +8,7 @@ export const App = () => {
             <div className="clock-container">
                 <Clock />
             </div>
+            <span className="dbd">developed by djavelin_</span>
         </>
     );
 };
