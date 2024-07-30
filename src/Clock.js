@@ -13,7 +13,8 @@ export const Clock = () => {
         return () => clearInterval(timer);
     }, []);
 
-    const code = `let time = {
+    const code = `
+    let time = {
         "hour": ${time.getHours()},
         "minute": ${time.getMinutes()},
         "second": ${time.getSeconds()},

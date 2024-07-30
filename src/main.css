@@ -24,7 +24,8 @@ body {
 .dbd {
     font-size: 15px;
     color: #636363;
-    padding-top: 100px;
+    /* padding-top: 100px; */
+    margin-top: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
