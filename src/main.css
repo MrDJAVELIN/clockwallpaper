@@ -17,6 +17,7 @@ body {
 }
 
 .clock {
+    user-select: none;
     font-size: 35px;
     font-family: "Consolas", "Menlo", "Monaco", "Courier New", monospace;
 }

@@ -13,7 +13,7 @@ export const Clock = () => {
         return () => clearInterval(timer);
     }, []);
 
-    const code = `
+    const codeTime = `
     let time = {
         "hour": ${time.getHours()},
         "minute": ${time.getMinutes()},
@@ -26,7 +26,7 @@ export const Clock = () => {
     return (
         <div className="clock">
             <SyntaxHighlighter language="javascript" style={monokaiSublime}>
-                {code}
+                {codeTime}
             </SyntaxHighlighter>
         </div>
     );
