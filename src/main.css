@@ -8,6 +8,11 @@ body {
     margin: 0;
 }
 
+.infoblock {
+    color: #fff;
+    font-family: "Consolas", "Menlo", "Monaco", "Courier New", monospace;
+}
+
 .clock-container {
     flex: 1;
     display: flex;

@@ -1,14 +1,24 @@
 import React from "react";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Clock } from "./Clock";
 import "./main.css";
+import InfoPage from "./InfoPage";
 
-export const App = () => {
-    return (
-        <>
+const router = createBrowserRouter([
+    {
+        path: "/",
+        element: (
             <div className="clock-container">
                 <Clock />
             </div>
-            <span className="dbd">developed by djavelin_</span>
-        </>
-    );
+        ),
+    },
+    {
+        path: "/docs",
+        element: <InfoPage />,
+    },
+]);
+
+export const App = () => {
+    return <RouterProvider router={router} />;
 };
