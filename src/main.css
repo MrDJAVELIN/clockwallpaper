@@ -11,6 +11,40 @@ body {
 .infoblock {
     color: #fff;
     font-family: "Consolas", "Menlo", "Monaco", "Courier New", monospace;
+    font-size: 24px;
+    text-align: center;
+}
+
+ul {
+    padding: 25px 0px;
+    list-style-type: none;
+    border: solid 1px #b3b3b3;
+    border-radius: 15px;
+    text-align: center;
+    transition: all 0.5s;
+}
+
+ul:hover {
+    border: solid 1px #fff;
+}
+
+li {
+    transition: all 0.5s;
+}
+
+li:hover {
+    font-size: 26px;
+    padding: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: #b3b3b3;
+    transition: all 0.5s;
+}
+
+a:hover {
+    color: #fff;
 }
 
 .clock-container {
