@@ -103,26 +103,23 @@ export const Clock = () => {
     const language = params.get("lang") || "javascript";
     const style = params.get("style") || "monokaiSublime";
 
-    const theme = () => {
-        if (style === "monokai") {
-            document.body.style.backgroundColor = "#272822";
-            return monokai;
-        }
-        if (style === "monokaiSublime") {
-            document.body.style.backgroundColor = "#23241f";
-            return monokaiSublime;
-        }
-        if (style === "dracula") {
-            document.body.style.backgroundColor = "#282a36";
-            return dracula;
-        }
-        if (style === "dark") {
-            document.body.style.backgroundColor = "#444444";
-            return dark;
-        }
-        if (style === "light") {
-            document.body.style.backgroundColor = "#fefefe";
-            return a11yLight;
+    const theme = (style) => {
+        switch (style) {
+            case "monokai":
+                document.body.style.backgroundColor = "#272822";
+                return monokai;
+            case "dracula":
+                document.body.style.backgroundColor = "#282a36";
+                return dracula;
+            case "dark":
+                document.body.style.backgroundColor = "#444444";
+                return dark;
+            case "light":
+                document.body.style.backgroundColor = "#fefefe";
+                return a11yLight;
+            default:
+                document.body.style.backgroundColor = "#23241f";
+                return monokaiSublime;
         }
     };
 
@@ -138,7 +135,7 @@ export const Clock = () => {
 
     return (
         <div className="clock">
-            <SyntaxHighlighter language={language} style={theme()}>
+            <SyntaxHighlighter language={language} style={theme(style)}>
                 {codeTime}
             </SyntaxHighlighter>
         </div>
