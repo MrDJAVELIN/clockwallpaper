@@ -103,6 +103,22 @@ export const Clock = () => {
     const language = params.get("lang") || "javascript";
     const style = params.get("style") || "monokaiSublime";
 
+    const lang = (language) => {
+        switch (style) {
+            case "python":
+                return "python";
+            case "csharp":
+                return "csharp";
+            case "cpp" || "c++":
+                return "cpp";
+            case "typescript" || "ts":
+                return "typescript";
+            case "rust":
+                return "rust";
+            default:
+                return "javascript";
+        }
+    };
     const theme = (style) => {
         switch (style) {
             case "monokai":
