@@ -104,7 +104,7 @@ export const Clock = () => {
     const style = params.get("style") || "monokaiSublime";
 
     const lang = (language) => {
-        switch (style) {
+        switch (language) {
             case "python":
                 return "python";
             case "csharp":
