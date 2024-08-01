@@ -147,11 +147,11 @@ export const Clock = () => {
         return () => clearInterval(timer);
     }, []);
 
-    const codeTime = getCodeByLang(language, time);
+    const codeTime = getCodeByLang(lang(language), time);
 
     return (
         <div className="clock">
-            <SyntaxHighlighter language={language} style={theme(style)}>
+            <SyntaxHighlighter language={lang(language)} style={theme(style)}>
                 {codeTime}
             </SyntaxHighlighter>
         </div>
