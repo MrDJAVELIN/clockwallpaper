@@ -119,6 +119,7 @@ export const Clock = () => {
                 return "javascript";
         }
     };
+
     const theme = (style) => {
         switch (style) {
             case "monokai":

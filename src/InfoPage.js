@@ -69,15 +69,6 @@ const InfoPage = () => {
                             click to view
                         </a>
                     </li>
-                    <li>
-                        Java{" "}
-                        <a
-                            href="/?lang=java&style=monokaiSublime"
-                            target="_blank"
-                        >
-                            click to view
-                        </a>
-                    </li>
                 </ul>
                 <label>List of supported themes/styles:</label>
                 <ul id="themes">
