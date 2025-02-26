@@ -1,1 +1,1 @@
-# ClockWallpaper
+# ClockWallpaper with settings
