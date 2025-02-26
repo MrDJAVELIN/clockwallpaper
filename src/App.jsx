@@ -1,21 +1,17 @@
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Clock } from "./Clock";
-import "./main.css";
-import InfoPage from "./InfoPage";
+import "./styles/main.css";
+import Generator from "./Generator";
 
 const router = createBrowserRouter([
     {
         path: "/",
-        element: (
-            <div className="clock-container">
-                <Clock />
-            </div>
-        ),
+        element: <Clock />,
     },
     {
-        path: "/docs",
-        element: <InfoPage />,
+        path: "/generator",
+        element: <Generator />,
     },
 ]);
 

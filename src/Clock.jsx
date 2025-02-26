@@ -96,27 +96,48 @@ let time = {
     }
 };
 
+const formatTime = (time) => {
+    return time.toLocaleTimeString("en-US", { hour12: false });
+};
+
 export const Clock = () => {
     const [time, setTime] = useState(new Date());
     const location = useLocation();
     const params = new URLSearchParams(location.search);
+
+    const clockType = params.get("clock") || "code";
+
+    const color = params.get("color") || "ffffff";
+    const font = params.get("font") || "Montserrat";
+    const weight = params.get("weight") || "600";
+    const size = params.get("size") || "30";
+    const bgColor = params.get("bg") || "121212";
+
     const language = params.get("lang") || "javascript";
     const style = params.get("style") || "monokaiSublime";
 
-    const lang = (language) => {
-        switch (language) {
-            case "python":
-                return "python";
-            case "csharp":
-                return "csharp";
-            case "cpp" || "c++":
-                return "cpp";
-            case "typescript" || "ts":
-                return "typescript";
-            case "rust":
-                return "rust";
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setTime(new Date());
+        }, 1000);
+
+        return () => clearInterval(timer);
+    }, []);
+
+    const codeTime = getCodeByLang(language, time);
+
+    const getFont = (font) => {
+        switch (font) {
+            case "Montserrat":
+                return "Montserrat";
+            case "Karla":
+                return "Karla";
+            case "Poppins":
+                return "Poppins";
+            case "Sigmar":
+                return "Sigmar";
             default:
-                return "javascript";
+                return "Montserrat";
         }
     };
 
@@ -140,21 +161,29 @@ export const Clock = () => {
         }
     };
 
-    useEffect(() => {
-        const timer = setInterval(() => {
-            setTime(new Date());
-        }, 1000);
-
-        return () => clearInterval(timer);
-    }, []);
-
-    const codeTime = getCodeByLang(lang(language), time);
-
     return (
         <div className="clock">
-            <SyntaxHighlighter language={lang(language)} style={theme(style)}>
-                {codeTime}
-            </SyntaxHighlighter>
+            <div
+                className="clock-container"
+                style={{ backgroundColor: `#${bgColor}` }}
+            >
+                {clockType === "classic" ? (
+                    <span
+                        style={{
+                            color: `#${color}`,
+                            fontFamily: `${getFont(font)}, serif`,
+                            fontWeight: `${weight}`,
+                            fontSize: `${size}px`,
+                        }}
+                    >
+                        {formatTime(time)}
+                    </span>
+                ) : (
+                    <SyntaxHighlighter language={language} style={theme(style)}>
+                        {codeTime}
+                    </SyntaxHighlighter>
+                )}
+            </div>
         </div>
     );
 };
