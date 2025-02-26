@@ -160,12 +160,30 @@ export const Clock = () => {
                 return monokaiSublime;
         }
     };
+    const bgcolortheme = (style) => {
+        switch (style) {
+            case "monokai":
+                return "272822";
+            case "dracula":
+                return "282a36";
+            case "dark":
+                return "444444";
+            case "light":
+                return "fefefe";
+            default:
+                return "23241f";
+        }
+    };
 
     return (
         <div className="clock">
             <div
                 className="clock-container"
-                style={{ backgroundColor: `#${bgColor}` }}
+                style={{
+                    backgroundColor: `#${
+                        clockType === "classic" ? bgColor : bgcolortheme(style)
+                    }`,
+                }}
             >
                 {clockType === "classic" ? (
                     <span
